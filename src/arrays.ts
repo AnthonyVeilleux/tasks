@@ -1,3 +1,5 @@
+import { NumericLiteral } from "typescript";
+
 /**
  * Consume an array of numbers, and return a new array containing
  * JUST the first and last number. If there are no elements, return
@@ -5,7 +7,19 @@
  * the number twice.
  */
 export function bookEndList(numbers: number[]): number[] {
-    return numbers;
+    let length: number = numbers.length;
+    let newArray: number[] = [];
+    if (length === 0) {
+        return numbers;
+    } else if (length === 1) {
+        newArray[0] = numbers[0];
+        newArray[1] = numbers[0];
+        return newArray;
+    } else {
+        newArray[0] = numbers[0];
+        newArray[1] = numbers[length - 1];
+        return newArray;
+    }
 }
 
 /**
