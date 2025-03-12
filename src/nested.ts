@@ -91,8 +91,8 @@ export function addNewQuestion(
     name: string,
     type: QuestionType,
 ): Question[] {
-    const newQuestion = makeBlankQuestion(id, name, type); // Create a blank question
-    return [...questions, newQuestion]; // Return a new array with the added question
+    const newQuestion = makeBlankQuestion(id, name, type);
+    return [...questions, newQuestion];
 }
 
 /***
