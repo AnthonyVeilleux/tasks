@@ -84,13 +84,15 @@ export function publishAll(questions: Question[]): Question[] {
  * you defined in the `objects.ts` file.
  * Hint: as usual, do not modify the input questions array
  */
+import { makeBlankQuestion } from "./objects";
 export function addNewQuestion(
     questions: Question[],
     id: number,
     name: string,
     type: QuestionType,
 ): Question[] {
-    return [];
+    const newQuestion = makeBlankQuestion(id, name, type); // Create a blank question
+    return [...questions, newQuestion]; // Return a new array with the added question
 }
 
 /***
